@@ -65,6 +65,7 @@ namespace lldb {
         
     private:
         friend class SBValue;
+        friend class SBType;
         
         const lldb_private::Declaration *
         operator->() const;

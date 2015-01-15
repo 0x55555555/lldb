@@ -83,7 +83,7 @@ fi
 # Next look for swig
 #
 
-SWIG=`which swig`
+SWIG=/Volumes/User/swig/bin/swig
 if [ ! -x "$SWIG" -a -f /usr/bin/swig ]
 then
     SWIG=/usr/bin/swig

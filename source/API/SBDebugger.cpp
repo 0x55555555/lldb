@@ -104,7 +104,7 @@ LoadPlugin (const lldb::DebuggerSP &debugger_sp, const FileSpec& spec, Error& er
         else
             error.SetErrorString("no such file");
     }
-    return llvm::sys::DynamicLibrary();
+    return dynlib;
 }
 
 void

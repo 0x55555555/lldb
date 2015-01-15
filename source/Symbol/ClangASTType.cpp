@@ -1834,10 +1834,8 @@ ClangASTType::GetMemberFunctionAtIndex (size_t idx)
                             auto method_decl = method_iter->getCanonicalDecl();
                             if (method_decl)
                             {
-                                if (!method_decl->getName().empty())
-                                    name.assign(method_decl->getName().data());
-                                else
-                                    name.clear();
+                                name.assign(method_decl->getNameAsString());
+
                                 if (method_decl->isStatic())
                                     kind = lldb::eMemberFunctionKindStaticMethod;
                                 else if (llvm::isa<clang::CXXConstructorDecl>(method_decl))
